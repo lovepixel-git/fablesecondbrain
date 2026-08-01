@@ -36,7 +36,7 @@ jobs:
       - name: Sanitize public output
         run: node scripts/sanitize-public.mjs
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: site/public
 
