@@ -1,0 +1,1361 @@
+{
+  "schema": "brainstein.source-ledger.v1",
+  "domain": "Claude Fable 5 model and Claude Code harness ai operations and source-cited best practices",
+  "generated_at": "2026-07-07",
+  "refresh_cadence": "30 days for official Anthropic docs and news; 90 days for practitioner sources; on-change for the system prompt export",
+  "sources": [
+    {
+      "id": "adaptive-thinking-docs",
+      "title": "Adaptive thinking (Claude Platform Docs)",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/adaptive-thinking",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Adaptive thinking is the only thinking mode on Claude Fable 5 and Claude Mythos 5 and cannot be disabled",
+        "The raw chain of thought is never returned; thinking.display is omitted by default or summarized on request",
+        "Manual budget_tokens and non-default temperature, top_p, or top_k are rejected with a 400 error on Fable 5",
+        "Adaptive thinking automatically enables interleaved thinking"
+      ]
+    },
+    {
+      "id": "aljazeera-export-lift",
+      "title": "US lifts restrictions on Anthropic's powerful AI models Fable and Mythos",
+      "url": "https://www.aljazeera.com/economy/2026/7/1/us-lifts-restrictions-on-powerful-ai-models-fable-mythos-anthropic-says",
+      "source_type": "authority",
+      "published": "2026-07-01",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "medium",
+      "claims": [
+        "The exact restoration timing is reported inconsistently: Anthropic dates the lift to June 30 with global restoration July 1, while Al Jazeera reports the Commerce Department notification on July 1 with restoration beginning July 2."
+      ]
+    },
+    {
+      "id": "alphasignal-fable5-analysis",
+      "title": "AlphaSignal: Fable 5 prompt leak analysis, link omitted for public release",
+      "url": "https://link-omitted.invalid/alphasignal-fable5-analysis",
+      "source_type": "practitioner",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-10-05",
+      "confidence": "medium",
+      "claims": [
+        "Practitioner analysis reads the leaked prompt as an agent design manual and flags its claude.ai-only scope"
+      ]
+    },
+    {
+      "id": "anthropic-claude-fable-page",
+      "title": "Claude Fable",
+      "url": "https://www.anthropic.com/claude/fable",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Fable 5 and Mythos 5 are both priced at $10 per million input tokens and $50 per million output tokens, less than half the price of Claude Mythos Preview; the product page adds a 90% prompt-caching input discount and US-only inference at 1.1x pricing.",
+        "Refused Fable 5 requests fall back to Claude Opus 4.8 via three paths: the server-side fallbacks parameter (beta header server-side-fallback-2026-06-01), SDK refusal-fallback middleware (TypeScript, Python, Go, Java, C#), or a manual retry with fallback credit; rerouted requests are billed at the serving model's prices.",
+        "Claude Fable 5 is generally available on the Claude API, Claude Platform on AWS, Amazon Bedrock (US East N. Virginia and Europe Stockholm regions), Google Cloud, and Microsoft Foundry, and is deployed in claude.ai and Claude Code for Pro, Max, Team, and Enterprise users."
+      ]
+    },
+    {
+      "id": "anthropic-eng-sandboxing",
+      "title": "Making Claude Code more secure and autonomous with sandboxing",
+      "url": "https://www.anthropic.com/engineering/claude-code-sandboxing",
+      "source_type": "official",
+      "published": "2025-10-20",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "The Claude Code Bash sandbox enforces filesystem and network isolation at the OS level, using Seatbelt on macOS and bubblewrap on Linux and WSL2, and the restrictions apply to all child processes; native Windows is not supported.",
+        "Anthropic's internal testing found that sandboxing safely reduces Claude Code permission prompts by 84 percent, and the underlying primitives are published as the open source sandbox-runtime research preview."
+      ]
+    },
+    {
+      "id": "anthropic-fable-safeguards-cjs",
+      "title": "More details on Fable 5's cyber safeguards and our jailbreak framework",
+      "url": "https://www.anthropic.com/news/fable-safeguards-jailbreak-framework",
+      "source_type": "official",
+      "published": "2026-07-02",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Anthropic's cyber safeguards for Fable 5 sort activity into four tiers from prohibited use to benign use, and its proposed Cyber Jailbreak Severity (CJS) scale scores jailbreaks 0 to 4 on capability gain, breadth, ease of weaponization, and discoverability."
+      ]
+    },
+    {
+      "id": "anthropic-glasswing",
+      "title": "Project Glasswing",
+      "url": "https://www.anthropic.com/glasswing",
+      "source_type": "official",
+      "published": "2026-04-07",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Claude Mythos 5 is not generally available: it is limited to approved customers in Project Glasswing (a defensive cybersecurity program with 12 founding partners including AWS, Apple, Google, Microsoft, and NVIDIA), succeeds Claude Mythos Preview, and access requires contacting an Anthropic, AWS, or Google Cloud account team."
+      ]
+    },
+    {
+      "id": "anthropic-news-fable-mythos-5",
+      "title": "Claude Fable 5 and Claude Mythos 5",
+      "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "source_type": "official",
+      "published": "2026-06-09",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Anthropic announced Claude Fable 5 and Claude Mythos 5 on June 9, 2026; Fable 5 is a Mythos-class model made safe for general use and is Anthropic's most capable widely released model.",
+        "The Mythos class is a capability tier positioned above the Opus class; Fable 5 delivers Mythos-level capabilities with built-in safeguards for broad access.",
+        "Fable 5 and Mythos 5 are both priced at $10 per million input tokens and $50 per million output tokens, less than half the price of Claude Mythos Preview; the product page adds a 90% prompt-caching input discount and US-only inference at 1.1x pricing.",
+        "Fable 5's refusal categories are cyber (offensive cybersecurity), bio (biological harm), frontier_llm (assisting competing AI development, described at launch as an anti-distillation safeguard), and reasoning_extraction (reproducing internal reasoning in response text).",
+        "Refused Fable 5 requests fall back to Claude Opus 4.8 via three paths: the server-side fallbacks parameter (beta header server-side-fallback-2026-06-01), SDK refusal-fallback middleware (TypeScript, Python, Go, Java, C#), or a manual retry with fallback credit; rerouted requests are billed at the serving model's prices.",
+        "Anthropic states Fable 5's safety classifiers trigger in under 5% of sessions on average, and that over 1,000 hours of external red-teaming produced no universal jailbreaks.",
+        "Fable 5 and Mythos 5 are designated Covered Models with mandatory 30-day data retention for safety monitoring and are not available under zero data retention; retained data is used for safety purposes, not model training.",
+        "Claude Fable 5 (claude-fable-5) and Claude Mythos 5 (claude-mythos-5), released June 9, 2026, share the same Mythos-class underlying model; Fable 5 adds safety classifiers for cybersecurity, biology and chemistry, and distillation, with flagged requests handled by Claude Opus 4.8 as fallback, while Mythos 5 ships without classifiers to Project Glasswing partners only."
+      ]
+    },
+    {
+      "id": "anthropic-news-redeploying-fable-5",
+      "title": "Redeploying Claude Fable 5",
+      "url": "https://www.anthropic.com/news/redeploying-fable-5",
+      "source_type": "official",
+      "published": "2026-06-30",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "US export controls applied on June 12, 2026 led Anthropic to suspend all access to Fable 5 and Mythos 5; Anthropic states the controls were lifted June 30, 2026, with Fable 5 restored globally on July 1 and Mythos 5 restored for a set of approved US organizations, and the docs confirm access has been restored.",
+        "The exact restoration timing is reported inconsistently: Anthropic dates the lift to June 30 with global restoration July 1, while Al Jazeera reports the Commerce Department notification on July 1 with restoration beginning July 2.",
+        "Anthropic suspended access to Fable 5 and Mythos 5 on June 12, 2026 after US export controls followed an Amazon-reported cyber jailbreak; after deploying a classifier that blocks the technique in over 99 percent of cases, controls were lifted June 30 and Fable 5 was redeployed globally July 1, 2026."
+      ]
+    },
+    {
+      "id": "anthropic-rsp",
+      "title": "Anthropic's Responsible Scaling Policy",
+      "url": "https://www.anthropic.com/responsible-scaling-policy",
+      "source_type": "official",
+      "published": "2026-05-26",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Anthropic's Responsible Scaling Policy is at version 3.3, effective May 26, 2026, with capability thresholds for CBRN, AI R&D, and cyber; the ASL-3 Deployment Standard layers access controls, real-time classifiers, asynchronous monitoring, and jailbreak rapid response, and the ASL-3 Security Standard specifies 17 controls protecting model weights."
+      ]
+    },
+    {
+      "id": "anthropic-system-prompts-release-notes",
+      "title": "Anthropic release notes: system prompts (official Fable 5 claude.ai prompt)",
+      "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Anthropic officially publishes the Fable 5 claude.ai system prompt behavioral core dated 2026-06-09",
+        "The published prompts cover claude.ai web and mobile only and do not apply to the Claude API"
+      ],
+      "published": "2026-06-09"
+    },
+    {
+      "id": "anthropic-usage-policy",
+      "title": "Anthropic Usage Policy",
+      "url": "https://www.anthropic.com/legal/aup",
+      "source_type": "official",
+      "published": "2025-09-15",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Anthropic's Usage Policy, effective September 15, 2025, is structured as Universal Usage Standards, High-Risk Use Case Requirements, and additional use case guidelines; high-risk consumer-facing domains such as legal, healthcare, and employment require human-in-the-loop review and AI disclosure."
+      ]
+    },
+    {
+      "id": "community-fable-5-capture-a",
+      "title": "Community Claude Fable 5 capture, link omitted for public release",
+      "url": "https://link-omitted.invalid/community-fable-5-capture-a",
+      "source_type": "practitioner",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-10-05",
+      "confidence": "medium",
+      "claims": [
+        "An independent community capture includes the token budget line, request_evaluation_checklist, and preferences blocks matching this vault's corpus"
+      ],
+      "published": "2026-06-09"
+    },
+    {
+      "id": "github-search-fable-system-prompt-2026-07-07",
+      "title": "GitHub repository search: claude-fable-5 system prompt",
+      "url": "https://link-omitted.invalid/github-search-fable-system-prompt",
+      "source_type": "primary",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "medium",
+      "claims": [
+        "GitHub repository search returned 18 repositories for the query claude-fable-5 plus system prompt on 2026-07-07.",
+        "The result set consists mostly of Fable 5 prompt mirrors, analyses, prompt-toolkit derivatives, and Claude Code repackagings rather than independent new captures."
+      ]
+    },
+    {
+      "id": "github-search-mythos-5-system-prompt-2026-07-07",
+      "title": "GitHub repository search: claude-mythos-5 system prompt",
+      "url": "https://link-omitted.invalid/github-search-mythos-system-prompt",
+      "source_type": "primary",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "medium",
+      "claims": [
+        "GitHub repository search returned zero repositories for the query claude-mythos-5 plus system prompt on 2026-07-07."
+      ]
+    },
+    {
+      "id": "github-search-claude-mythos-leak-2026-07-07",
+      "title": "GitHub repository search: Claude Mythos leak",
+      "url": "https://link-omitted.invalid/github-search-mythos-leak",
+      "source_type": "primary",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "medium",
+      "claims": [
+        "GitHub repository search returned 42 repositories for Claude Mythos plus leak on 2026-07-07, dominated in the first page by low-evidence Aether Guardian nodes and non-Mythos reconstructions rather than direct Mythos 5 prompt artifacts."
+      ]
+    },
+    {
+      "id": "community-mislabeled-mythos-prompt",
+      "title": "Mislabeled Mythos prompt community copy, link omitted for public release",
+      "url": "https://link-omitted.invalid/mislabeled-mythos-prompt-copy",
+      "source_type": "practitioner",
+      "published": "2026-06-11",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-10-05",
+      "confidence": "medium",
+      "claims": [
+        "The GitHub Gist titled Mythos system prompt actually contains a Claude Fable 5 system prompt heading and Fable claude.ai product-information text, so it is a mislabeled Fable copy rather than a Mythos 5 prompt leak."
+      ]
+    },
+    {
+      "id": "community-fable-5-system-prompt-archive",
+      "title": "Community Claude Fable 5 system-prompt archive, link omitted for public release",
+      "url": "https://link-omitted.invalid/community-fable-5-system-prompt-archive",
+      "source_type": "practitioner",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-10-05",
+      "confidence": "medium",
+      "claims": [
+        "The repository claims to contain the complete Claude Fable 5 system prompt at roughly 1,580 lines and organizes it into full prompt, tool definitions, highlights, and analysis folders."
+      ]
+    },
+    {
+      "id": "halalifymusic-fable-mode",
+      "title": "HalalifyMusic/fable-mode",
+      "url": "https://link-omitted.invalid/public-release",
+      "source_type": "practitioner",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-10-05",
+      "confidence": "low",
+      "claims": [
+        "The repository repackages a leaked Fable 5 system prompt into a Claude Code and Opus 4.8 workflow and explicitly frames it as transferring disposition rather than raw Fable capability."
+      ]
+    },
+    {
+      "id": "kyegomez-openmythos",
+      "title": "kyegomez/OpenMythos",
+      "url": "https://link-omitted.invalid/public-release",
+      "source_type": "practitioner",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-10-05",
+      "confidence": "low",
+      "claims": [
+        "OpenMythos describes itself as an independent theoretical reconstruction based on public research and speculation and states it is not affiliated with Anthropic or connected to Anthropic proprietary systems."
+      ]
+    },
+    {
+      "id": "alexey-fedorov-claude-mythos-preview-cli",
+      "title": "alexey-max-fedorov/claude-mythos-preview",
+      "url": "https://link-omitted.invalid/public-release",
+      "source_type": "practitioner",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-10-05",
+      "confidence": "low",
+      "claims": [
+        "The repository labels itself entertainment or joke software and states it is not real Claude Mythos Preview; it is not evidence of a Mythos model leak."
+      ]
+    },
+    {
+      "id": "aws-blog-fable-5",
+      "title": "Anthropic Claude Fable 5 on AWS: Mythos-class capabilities with built-in safeguards now available",
+      "url": "https://aws.amazon.com/blogs/aws/anthropic-claude-fable-5-on-aws-mythos-class-capabilities-with-built-in-safeguards-now-available",
+      "source_type": "vendor",
+      "published": "2026-06-09",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "medium",
+      "claims": [
+        "The Mythos class is a capability tier positioned above the Opus class; Fable 5 delivers Mythos-level capabilities with built-in safeguards for broad access.",
+        "Claude Fable 5 is generally available on the Claude API, Claude Platform on AWS, Amazon Bedrock (US East N. Virginia and Europe Stockholm regions), Google Cloud, and Microsoft Foundry, and is deployed in claude.ai and Claude Code for Pro, Max, Team, and Enterprise users.",
+        "Fable 5 and Mythos 5 are designated Covered Models with mandatory 30-day data retention for safety monitoring and are not available under zero data retention; retained data is used for safety purposes, not model training."
+      ]
+    },
+    {
+      "id": "bea-2024",
+      "title": "Building Effective Agents (Anthropic Engineering)",
+      "url": "https://www.anthropic.com/engineering/building-effective-agents",
+      "source_type": "official",
+      "published": "2024-12-19",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Anthropic distinguishes workflows, where LLMs and tools follow predefined code paths, from agents, where the LLM dynamically directs its own process and tool usage.",
+        "The Building Effective Agents essay (December 2024) catalogs five composable workflow patterns: prompt chaining, routing, parallelization, orchestrator-workers, and evaluator-optimizer.",
+        "Anthropic's first principle for agent builders is simplicity: start with direct LLM API calls, add agentic complexity only when it demonstrably improves outcomes, and beware framework abstractions that obscure prompts and hinder debugging."
+      ]
+    },
+    {
+      "id": "building-safeguards-for-claude",
+      "title": "Building safeguards for Claude",
+      "url": "https://www.anthropic.com/news/building-safeguards-for-claude",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Safeguards designs refusal policy via a Unified Harm Framework and trains with domain experts such as ThroughLine for mental health",
+        "Claude is trained to distinguish sensitive discussion from actual harm attempts rather than blanket-refuse"
+      ],
+      "published": "2025-08-12"
+    },
+    {
+      "id": "cc-best-practices",
+      "title": "Best practices for Claude Code (official docs, formerly anthropic.com/engineering/claude-code-best-practices)",
+      "url": "https://code.claude.com/docs/en/best-practices",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "The canonical Claude Code documentation now lives at code.claude.com/docs: docs.claude.com Claude Code pages 301-redirect there, and the former Anthropic engineering post at anthropic.com/engineering/claude-code-best-practices 308-redirects to code.claude.com/docs/en/best-practices, making the docs page the current official best-practices guide. The docs cover memory, permission modes, settings, hooks, subagents, skills, non-interactive mode, and per-surface guides (CLI, VS Code, JetBrains, Desktop, Web).",
+        "The top official best practice is to give Claude a verifiable check (tests, build exit code, linter, screenshot comparison) so it can iterate until the check passes instead of relying on the user as the verification loop; checks can gate harder via /goal conditions, Stop hooks, or a fresh-context verification subagent.",
+        "The officially recommended workflow is explore, plan, implement, commit: use plan mode to research and produce a plan before switching modes to implement, but skip planning overhead for small, clearly scoped fixes.",
+        "Official guidance is to keep CLAUDE.md short and ruthlessly pruned, including only what Claude cannot infer from code (build commands, style rules that differ from defaults, repo etiquette, gotchas), because overlong files reduce adherence; run /init to generate a starter file and add emphasis like IMPORTANT or YOU MUST for critical rules.",
+        "Auto mode (research preview, v2.1.83+) eliminates routine permission prompts by having a separate classifier model review each action, blocking scope escalation, unknown infrastructure, and hostile-content-driven actions; it pauses back to prompting after 3 consecutive or 20 total blocks, and in non-interactive -p runs repeated blocks abort the session.",
+        "Plan mode is a read-only research mode: Claude reads files and proposes a plan without editing source, entered via Shift+Tab, a /plan prompt prefix, or claude --permission-mode plan; approving the plan switches the session into the chosen execution mode, and Ctrl+G opens the plan in a text editor for direct edits before proceeding.",
+        "Hooks are the official mechanism for actions that must happen every time: unlike advisory CLAUDE.md instructions they execute deterministically at lifecycle events (per-session SessionStart/SessionEnd, per-turn UserPromptSubmit/Stop, per-tool-call PreToolUse/PostToolUse, plus PermissionRequest and compaction events), are configured in settings JSON with matchers, and exit code 2 from a hook blocks the action while stderr is fed back to Claude.",
+        "Subagents are Markdown files with YAML frontmatter (name, description, tools, model) stored in .claude/agents/ (project) or ~/.claude/agents/ (user); each runs in a separate context window so research and verification do not consume the main conversation, and built-in Explore, Plan, and general-purpose subagents are delegated to automatically. As of v2.1.198 the /agents creation wizard is removed in favor of asking Claude or editing files directly."
+      ]
+    },
+    {
+      "id": "cc-github",
+      "title": "anthropics/claude-code GitHub repository",
+      "url": "https://github.com/anthropics/claude-code",
+      "source_type": "primary",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "The canonical Claude Code documentation now lives at code.claude.com/docs: docs.claude.com Claude Code pages 301-redirect there, and the former Anthropic engineering post at anthropic.com/engineering/claude-code-best-practices 308-redirects to code.claude.com/docs/en/best-practices, making the docs page the current official best-practices guide. The docs cover memory, permission modes, settings, hooks, subagents, skills, non-interactive mode, and per-surface guides (CLI, VS Code, JetBrains, Desktop, Web)."
+      ]
+    },
+    {
+      "id": "cc-headless",
+      "title": "Run Claude Code programmatically (non-interactive mode, official docs)",
+      "url": "https://code.claude.com/docs/en/headless",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Non-interactive mode (claude -p) is the official path for CI, scripts, and pipelines, with text, json, and stream-json output formats, --json-schema for structured output, --allowedTools with permission-rule syntax for pre-approval, and --continue/--resume for multi-step automation; the new --bare flag skips auto-discovery of hooks, skills, plugins, MCP servers, and CLAUDE.md for reproducible runs."
+      ]
+    },
+    {
+      "id": "cc-hooks",
+      "title": "Hooks reference (official docs)",
+      "url": "https://code.claude.com/docs/en/hooks",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Hooks are the official mechanism for actions that must happen every time: unlike advisory CLAUDE.md instructions they execute deterministically at lifecycle events (per-session SessionStart/SessionEnd, per-turn UserPromptSubmit/Stop, per-tool-call PreToolUse/PostToolUse, plus PermissionRequest and compaction events), are configured in settings JSON with matchers, and exit code 2 from a hook blocks the action while stderr is fed back to Claude."
+      ]
+    },
+    {
+      "id": "cc-memory",
+      "title": "How Claude remembers your project: CLAUDE.md and auto memory (official docs)",
+      "url": "https://code.claude.com/docs/en/memory",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Official guidance is to keep CLAUDE.md short and ruthlessly pruned, including only what Claude cannot infer from code (build commands, style rules that differ from defaults, repo etiquette, gotchas), because overlong files reduce adherence; run /init to generate a starter file and add emphasis like IMPORTANT or YOU MUST for critical rules.",
+        "CLAUDE.md files load at multiple scopes in a defined order: managed policy (for example /etc/claude-code/CLAUDE.md on Linux), user ~/.claude/CLAUDE.md, project ./CLAUDE.md or ./.claude/CLAUDE.md, and gitignored ./CLAUDE.local.md; parent-directory files load in full at launch while subdirectory files load on demand, and official sizing guidance targets under 200 lines per file, with .claude/rules/ providing path-scoped rules via paths frontmatter.",
+        "CLAUDE.md supports @path/to/import syntax with recursive imports up to four hops, and Claude Code does not read AGENTS.md natively; the official pattern for repos using AGENTS.md is a CLAUDE.md that imports it (or a symlink).",
+        "Claude Code has a second memory system called auto memory, on by default since v2.1.59: Claude saves its own learnings per repository under ~/.claude/projects/<project>/memory/, and the first 200 lines or 25KB of MEMORY.md load into every session; it is inspectable and editable via /memory and can be disabled with autoMemoryEnabled false.",
+        "Hooks are the official mechanism for actions that must happen every time: unlike advisory CLAUDE.md instructions they execute deterministically at lifecycle events (per-session SessionStart/SessionEnd, per-turn UserPromptSubmit/Stop, per-tool-call PreToolUse/PostToolUse, plus PermissionRequest and compaction events), are configured in settings JSON with matchers, and exit code 2 from a hook blocks the action while stderr is fed back to Claude.",
+        "Official guidance splits persistent context by load pattern: put broadly applicable, every-session facts in CLAUDE.md and move multi-step procedures or occasionally relevant domain knowledge into skills, since skills cost almost no context until used."
+      ]
+    },
+    {
+      "id": "cc-overview",
+      "title": "Claude Code Overview (official docs)",
+      "url": "https://code.claude.com/docs/en/overview",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "The canonical Claude Code documentation now lives at code.claude.com/docs: docs.claude.com Claude Code pages 301-redirect there, and the former Anthropic engineering post at anthropic.com/engineering/claude-code-best-practices 308-redirects to code.claude.com/docs/en/best-practices, making the docs page the current official best-practices guide. The docs cover memory, permission modes, settings, hooks, subagents, skills, non-interactive mode, and per-surface guides (CLI, VS Code, JetBrains, Desktop, Web).",
+        "Claude Code has a second memory system called auto memory, on by default since v2.1.59: Claude saves its own learnings per repository under ~/.claude/projects/<project>/memory/, and the first 200 lines or 25KB of MEMORY.md load into every session; it is inspectable and editable via /memory and can be disabled with autoMemoryEnabled false.",
+        "For IDE use, the VS Code extension (also installable in Cursor and other forks) is the recommended integration, providing inline diffs, @-mentions with line ranges, plan review, and checkpoints; it bundles its own CLI copy while sharing ~/.claude/settings.json, conversation history, CLAUDE.md, and MCP config with the terminal CLI, and the JetBrains plugin runs the CLI in the IDE terminal with the same Shift+Tab mode switching."
+      ]
+    },
+    {
+      "id": "cc-permission-modes",
+      "title": "Choose a permission mode (official docs)",
+      "url": "https://code.claude.com/docs/en/permission-modes",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "The officially recommended workflow is explore, plan, implement, commit: use plan mode to research and produce a plan before switching modes to implement, but skip planning overhead for small, clearly scoped fixes.",
+        "Claude Code offers six permission modes (default, labeled Manual; acceptEdits; plan; auto; dontAsk; bypassPermissions), cycled with Shift+Tab in the CLI or set via --permission-mode and the defaultMode setting; bypassPermissions skips prompts entirely and is officially restricted to isolated environments, refusing to start as root.",
+        "Auto mode (research preview, v2.1.83+) eliminates routine permission prompts by having a separate classifier model review each action, blocking scope escalation, unknown infrastructure, and hostile-content-driven actions; it pauses back to prompting after 3 consecutive or 20 total blocks, and in non-interactive -p runs repeated blocks abort the session.",
+        "Plan mode is a read-only research mode: Claude reads files and proposes a plan without editing source, entered via Shift+Tab, a /plan prompt prefix, or claude --permission-mode plan; approving the plan switches the session into the chosen execution mode, and Ctrl+G opens the plan in a text editor for direct edits before proceeding.",
+        "For IDE use, the VS Code extension (also installable in Cursor and other forks) is the recommended integration, providing inline diffs, @-mentions with line ranges, plan review, and checkpoints; it bundles its own CLI copy while sharing ~/.claude/settings.json, conversation history, CLAUDE.md, and MCP config with the terminal CLI, and the JetBrains plugin runs the CLI in the IDE terminal with the same Shift+Tab mode switching.",
+        "Claude Code offers six permission modes: default (labeled Manual), acceptEdits, plan, auto, dontAsk, and bypassPermissions, cycled in the CLI with Shift+Tab or set via --permission-mode and settings.json defaultMode.",
+        "In every Claude Code permission mode except bypassPermissions, writes to protected paths such as .git, .claude, shell rc files, and .mcp.json are never auto-approved, and allow rules in settings cannot pre-approve them.",
+        "Claude Code auto mode routes actions through a separate classifier that blocks escalation beyond the request, unrecognized infrastructure, and actions driven by hostile content; tool results are stripped from the classifier's view so injected content cannot manipulate it directly."
+      ]
+    },
+    {
+      "id": "cc-sandboxing-docs",
+      "title": "Configure the sandboxed Bash tool (Claude Code Docs)",
+      "url": "https://code.claude.com/docs/en/sandboxing",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "The Claude Code Bash sandbox enforces filesystem and network isolation at the OS level, using Seatbelt on macOS and bubblewrap on Linux and WSL2, and the restrictions apply to all child processes; native Windows is not supported.",
+        "Sandboxing is defense in depth, not a complete isolation boundary: the built-in proxy allows domains by client-supplied hostname without inspecting TLS by default, so broad allowlists like github.com can enable exfiltration via domain fronting."
+      ]
+    },
+    {
+      "id": "cc-security",
+      "title": "Security (Claude Code Docs)",
+      "url": "https://code.claude.com/docs/en/security",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Claude Code's baseline security model is read-only by default: editing files and running system-modifying Bash commands require explicit approval, and write access is confined to the working directory and its subfolders.",
+        "Claude Code's documented prompt injection safeguards include the permission system, context-aware analysis, input sanitization, non-auto-approved network commands like curl and wget, isolated context windows for web fetch, trust verification for new codebases and MCP servers, and command injection detection."
+      ]
+    },
+    {
+      "id": "cc-settings",
+      "title": "Claude Code settings (official docs)",
+      "url": "https://code.claude.com/docs/en/settings",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Settings live in a documented hierarchy: managed org settings override command-line arguments, which override .claude/settings.local.json, then project .claude/settings.json, then user ~/.claude/settings.json; settings files configure permissions allow/deny rules, hooks, env vars, and model, permission rules merge across scopes rather than override, and most edits hot-reload without restart."
+      ]
+    },
+    {
+      "id": "cc-skills",
+      "title": "Extend Claude with skills (official docs)",
+      "url": "https://code.claude.com/docs/en/skills",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Custom slash commands and skills are now one system: a file at .claude/commands/deploy.md and a skill at .claude/skills/deploy/SKILL.md both create /deploy, with skills adding supporting-file directories, invocation control via disable-model-invocation frontmatter, $ARGUMENTS, and dynamic context injection; skill bodies load on demand rather than in every session, and Claude Code skills follow the Agent Skills open standard.",
+        "Official guidance splits persistent context by load pattern: put broadly applicable, every-session facts in CLAUDE.md and move multi-step procedures or occasionally relevant domain knowledge into skills, since skills cost almost no context until used.",
+        "The Agent Skills format was originally developed by Anthropic and released as an open standard (agentskills.io), and it is now supported by many third-party agents including Cursor, GitHub Copilot, VS Code, Gemini CLI, OpenAI Codex, OpenCode, Goose, and Amp; Claude Code follows the standard and extends it with invocation control, subagent execution, and dynamic context injection.",
+        "In Claude Code, custom slash commands have been merged into skills: a file at .claude/commands/deploy.md and a skill at .claude/skills/deploy/SKILL.md both create /deploy and work the same way, with skills adding supporting files, invocation-control frontmatter, and automatic model invocation.",
+        "Claude Code loads skills from four levels: enterprise (managed settings), personal (~/.claude/skills/), project (.claude/skills/), and plugins (<plugin>/skills/); when names collide, enterprise wins over personal and personal wins over project, plugin skills are namespaced as plugin-name:skill-name, and nested .claude/skills/ directories in subdirectories load on demand for monorepos."
+      ]
+    },
+    {
+      "id": "cc-subagents",
+      "title": "Create custom subagents (official docs)",
+      "url": "https://code.claude.com/docs/en/sub-agents",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Subagents are Markdown files with YAML frontmatter (name, description, tools, model) stored in .claude/agents/ (project) or ~/.claude/agents/ (user); each runs in a separate context window so research and verification do not consume the main conversation, and built-in Explore, Plan, and general-purpose subagents are delegated to automatically. As of v2.1.198 the /agents creation wizard is removed in favor of asking Claude or editing files directly."
+      ]
+    },
+    {
+      "id": "cc-vscode",
+      "title": "Use Claude Code in VS Code (official docs)",
+      "url": "https://code.claude.com/docs/en/vs-code",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "For IDE use, the VS Code extension (also installable in Cursor and other forks) is the recommended integration, providing inline diffs, @-mentions with line ranges, plan review, and checkpoints; it bundles its own CLI copy while sharing ~/.claude/settings.json, conversation history, CLAUDE.md, and MCP config with the terminal CLI, and the JetBrains plugin runs the CLI in the IDE terminal with the same Shift+Tab mode switching."
+      ]
+    },
+    {
+      "id": "ccompiler-2026",
+      "title": "Building a C compiler with a team of parallel Claudes (Anthropic Engineering)",
+      "url": "https://www.anthropic.com/engineering/building-c-compiler",
+      "source_type": "official",
+      "published": "2026-02-05",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "The February 2026 C compiler experiment ran 16 parallel Claude Opus 4.6 agents coordinating through git and file-based task locks with no human intervention, extending orchestrator-worker practice into autonomous agent teams and showing that near-perfect task verifiers are critical."
+      ]
+    },
+    {
+      "id": "child-safety-principles",
+      "title": "Aligning on child safety principles",
+      "url": "https://www.anthropic.com/news/child-safety-principles",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Anthropic committed to Thorn and All Tech Is Human Safety-by-Design principles including CSAM detection and NCMEC reporting"
+      ],
+      "published": "2024-04-23"
+    },
+    {
+      "id": "clarity-fable-5-capture",
+      "title": "Community Claude Fable 5 capture lineage, link omitted for public release",
+      "url": "https://link-omitted.invalid/community-fable-5-capture-lineage",
+      "source_type": "practitioner",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-10-05",
+      "confidence": "medium",
+      "claims": [
+        "The June 2026 community capture of the Fable 5 claude.ai prompt was 1,585 lines and matches the section set of this vault's corpus"
+      ],
+      "published": "2026-06-10"
+    },
+    {
+      "id": "claude-character",
+      "title": "Claude's Character",
+      "url": "https://www.anthropic.com/news/claude-character",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Anthropic trains character traits via a Constitutional AI variant where Claude self-ranks responses against trait descriptions",
+        "Claude is trained to honestly express its leanings rather than adopt user views or claim pure objectivity"
+      ],
+      "published": "2024-06-08"
+    },
+    {
+      "id": "claude-code-model-config",
+      "title": "Model configuration (Claude Code Docs)",
+      "url": "https://code.claude.com/docs/en/model-config",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Claude Code's /config thinking mode toggle is saved as alwaysThinkingEnabled and thinking cannot be turned off on Fable 5",
+        "MAX_THINKING_TOKENS=0 turns thinking off on the Anthropic API except on Fable 5"
+      ]
+    },
+    {
+      "id": "claudes-constitution",
+      "title": "Claude's Constitution",
+      "url": "https://www.anthropic.com/constitution",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "The constitution's priority order is broad safety, broad ethics, Anthropic's guidelines, then genuine helpfulness",
+        "Honesty is a near-absolute commitment; hard constraints like bioweapons and child exploitation remain absolute"
+      ]
+    },
+    {
+      "id": "compaction-docs",
+      "title": "Compaction (Claude Docs)",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/compaction.md",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Server-side compaction (beta header compact-2026-01-12, context_management edit type compact_20260112) automatically summarizes earlier conversation into a compaction block when input tokens reach the trigger threshold (default 150,000, minimum 50,000), and Anthropic positions it as the primary context management strategy; billing adds a compaction iteration, so total tokens are the sum across usage.iterations, not the top-level fields.",
+        "With compaction enabled, the client must append the entire response.content, including compaction blocks, back into messages on subsequent requests; when the API receives a compaction block it ignores all content blocks before it, and appending only the text silently loses compaction state."
+      ]
+    },
+    {
+      "id": "context-editing-docs",
+      "title": "Context editing (Claude Docs)",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/context-editing.md",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Context editing (beta header context-management-2025-06-27) clears rather than summarizes: clear_tool_uses_20250919 clears the oldest tool results with defaults of a 100,000 input-token trigger and keeping the 3 most recent tool uses, and clear_thinking_20251015 controls how many thinking turns are preserved; when combined, clear_thinking_20251015 must be listed first in the edits array.",
+        "Context editing executes server-side before the prompt reaches Claude, so the client keeps the full unmodified conversation history; clearing tool results invalidates cached prompt prefixes at the clearing point, and the clear_at_least option ensures enough tokens are cleared to justify that cache invalidation, while kept thinking blocks preserve cache hits."
+      ]
+    },
+    {
+      "id": "context-management-news",
+      "title": "Managing context on the Claude Developer Platform (announcement)",
+      "url": "https://claude.com/blog/context-management",
+      "source_type": "official",
+      "published": "2025-09-29",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Anthropic launched context editing and the memory tool alongside Claude Sonnet 4.5 on September 29, 2025, reporting a 39% improvement over baseline on agentic search with memory plus context editing, 29% with context editing alone, and an 84% reduction in token consumption on a 100-turn web search evaluation."
+      ]
+    },
+    {
+      "id": "context-windows-docs",
+      "title": "Context windows (Claude Docs)",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/context-windows.md",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Cache behavior is verified from the response usage object, where total input equals input_tokens plus cache_creation_input_tokens plus cache_read_input_tokens; cached prefixes still occupy the context window because caching changes billing, not token accounting.",
+        "Claude Fable 5, Claude Mythos 5, Claude Opus 4.8, 4.7, and 4.6, Claude Sonnet 5, and Claude Sonnet 4.6 have 1M-token context windows, with 1M as the default requiring no beta header and billed at standard pricing; Claude Fable 5 can generate up to 128K output tokens per request, while models such as Claude Sonnet 4.5 have 200K-token windows.",
+        "More context is not automatically better: as token count grows, model accuracy and recall degrade (context rot), so curating what is in context matters as much as how much space is available.",
+        "Server-side compaction (beta header compact-2026-01-12, context_management edit type compact_20260112) automatically summarizes earlier conversation into a compaction block when input tokens reach the trigger threshold (default 150,000, minimum 50,000), and Anthropic positions it as the primary context management strategy; billing adds a compaction iteration, so total tokens are the sum across usage.iterations, not the top-level fields.",
+        "Claude Sonnet 5, Sonnet 4.6, Sonnet 4.5, and Haiku 4.5 have automatic context awareness in which the API injects a token budget and remaining-capacity updates into the prompt; in harnesses that compact or persist context, prompting Claude that its context will be compacted prevents it from wrapping up work early, and when a window is cleared, starting a fresh context window and letting the model rediscover state from the filesystem can beat compaction."
+      ]
+    },
+    {
+      "id": "crosley-hooks",
+      "title": "Claude Code Hooks Explained: The Deterministic Layer Around Your Agent (Blake Crosley)",
+      "url": "https://blakecrosley.com/blog/claude-code-hooks-explained",
+      "source_type": "practitioner",
+      "published": "2026-07-01",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-10-05",
+      "confidence": "medium",
+      "claims": [
+        "Practitioner consensus in mid-2026 treats hooks as the deterministic enforcement layer around the probabilistic model: most production setups center on PreToolUse, PostToolUse, UserPromptSubmit, SessionStart, and Stop, and a common footgun is using exit code 1, which does not block; policy hooks must exit 2.",
+        "Practitioner guidance converges with official docs on constraining through systems rather than prompts: enforce mandatory rules with hooks and permission rules, keep CLAUDE.md minimal, isolate research and review in subagent contexts, and prototype fan-out batch runs on 2-3 files before scaling."
+      ]
+    },
+    {
+      "id": "ctx-eng-2025",
+      "title": "Effective context engineering for AI agents (Anthropic Engineering)",
+      "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "source_type": "official",
+      "published": "2025-09-29",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Context engineering supersedes prompt engineering as the framing for agents: treat the context window as a finite attention budget and curate it across turns using compaction, structured note-taking, just-in-time retrieval, and sub-agent context isolation.",
+        "More context is not automatically better: as token count grows, model accuracy and recall degrade (context rot), so curating what is in context matters as much as how much space is available.",
+        "Anthropic's context engineering guidance treats context as a finite resource with an attention budget that depletes as tokens accumulate; the goal is the smallest set of high-signal tokens that maximizes the desired outcome, with system prompts written at the right altitude, specific enough to guide behavior yet flexible enough to act as heuristics.",
+        "For agent retrieval, Anthropic recommends just-in-time strategies: keep lightweight identifiers such as file paths and links in context and load data at runtime through tools, optionally hybridized with some pre-retrieved data for speed; for long-horizon tasks it recommends compaction, structured note-taking in persistent memory, and sub-agent architectures where focused agents return distilled summaries of roughly 1,000 to 2,000 tokens."
+      ]
+    },
+    {
+      "id": "community-fable5-verification",
+      "title": "fable5-system-prompt behavioral verification",
+      "url": "https://link-omitted.invalid/community-fable5-verification",
+      "source_type": "practitioner",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-10-05",
+      "confidence": "medium",
+      "claims": [
+        "27 comparison experiments on the leaked prompt found it changes response style rather than capability"
+      ],
+      "published": "2026-06-15"
+    },
+    {
+      "id": "docs-introducing-fable-mythos",
+      "title": "Introducing Claude Fable 5 and Claude Mythos 5 - Claude Platform Docs",
+      "url": "https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5",
+      "source_type": "api-docs",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "medium",
+      "claims": [
+        "Anthropic announced Claude Fable 5 and Claude Mythos 5 on June 9, 2026; Fable 5 is a Mythos-class model made safe for general use and is Anthropic's most capable widely released model.",
+        "Current Claude API model IDs are claude-fable-5, claude-mythos-5, claude-opus-4-8, claude-sonnet-5, and claude-haiku-4-5-20251001 (alias claude-haiku-4-5); every Claude model ID is a pinned snapshot, and dateless IDs from the 4.6 generation onward are also pinned snapshots, not evergreen pointers.",
+        "Claude Fable 5 and Claude Mythos 5 share the same specs: a 1M-token context window by default, up to 128k output tokens per request, a January 2026 knowledge cutoff, and the tokenizer introduced with Claude Opus 4.7, which produces roughly 30% more tokens than pre-4.7 models for the same text.",
+        "Fable 5 and Mythos 5 are both priced at $10 per million input tokens and $50 per million output tokens, less than half the price of Claude Mythos Preview; the product page adds a 90% prompt-caching input discount and US-only inference at 1.1x pricing.",
+        "The dual-use safety difference between the two models: Claude Fable 5 includes safety classifiers that can decline requests, while Claude Mythos 5 does not include these classifiers.",
+        "Refused Fable 5 requests fall back to Claude Opus 4.8 via three paths: the server-side fallbacks parameter (beta header server-side-fallback-2026-06-01), SDK refusal-fallback middleware (TypeScript, Python, Go, Java, C#), or a manual retry with fallback credit; rerouted requests are billed at the serving model's prices.",
+        "Claude Mythos 5 is not generally available: it is limited to approved customers in Project Glasswing (a defensive cybersecurity program with 12 founding partners including AWS, Apple, Google, Microsoft, and NVIDIA), succeeds Claude Mythos Preview, and access requires contacting an Anthropic, AWS, or Google Cloud account team.",
+        "Claude Fable 5 is generally available on the Claude API, Claude Platform on AWS, Amazon Bedrock (US East N. Virginia and Europe Stockholm regions), Google Cloud, and Microsoft Foundry, and is deployed in claude.ai and Claude Code for Pro, Max, Team, and Enterprise users."
+      ]
+    },
+    {
+      "id": "docs-models-overview",
+      "title": "Models overview - Claude Platform Docs",
+      "url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+      "source_type": "api-docs",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "medium",
+      "claims": [
+        "Current Claude API model IDs are claude-fable-5, claude-mythos-5, claude-opus-4-8, claude-sonnet-5, and claude-haiku-4-5-20251001 (alias claude-haiku-4-5); every Claude model ID is a pinned snapshot, and dateless IDs from the 4.6 generation onward are also pinned snapshots, not evergreen pointers.",
+        "Claude Fable 5 and Claude Mythos 5 share the same specs: a 1M-token context window by default, up to 128k output tokens per request, a January 2026 knowledge cutoff, and the tokenizer introduced with Claude Opus 4.7, which produces roughly 30% more tokens than pre-4.7 models for the same text.",
+        "The rest of the current lineup prices below Fable 5: Claude Opus 4.8 at $5/$25 per MTok with a 1M context window, Claude Sonnet 5 at $3/$15 with a 1M context window, and Claude Haiku 4.5 at $1/$5 with a 200k context window.",
+        "Claude Mythos 5 is not generally available: it is limited to approved customers in Project Glasswing (a defensive cybersecurity program with 12 founding partners including AWS, Apple, Google, Microsoft, and NVIDIA), succeeds Claude Mythos Preview, and access requires contacting an Anthropic, AWS, or Google Cloud account team.",
+        "Claude Fable 5 is generally available on the Claude API, Claude Platform on AWS, Amazon Bedrock (US East N. Virginia and Europe Stockholm regions), Google Cloud, and Microsoft Foundry, and is deployed in claude.ai and Claude Code for Pro, Max, Team, and Enterprise users."
+      ]
+    },
+    {
+      "id": "docs-refusals-fallback",
+      "title": "Refusals and fallback - Claude Platform Docs",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/refusals-and-fallback",
+      "source_type": "api-docs",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "medium",
+      "claims": [
+        "The dual-use safety difference between the two models: Claude Fable 5 includes safety classifiers that can decline requests, while Claude Mythos 5 does not include these classifiers.",
+        "Fable 5's refusal categories are cyber (offensive cybersecurity), bio (biological harm), frontier_llm (assisting competing AI development, described at launch as an anti-distillation safeguard), and reasoning_extraction (reproducing internal reasoning in response text).",
+        "A Fable 5 refusal is returned as a successful HTTP 200 with stop_reason \"refusal\" and a stop_details object naming the category; a refusal that arrives before any output is not billed and does not count against rate limits.",
+        "Refused Fable 5 requests fall back to Claude Opus 4.8 via three paths: the server-side fallbacks parameter (beta header server-side-fallback-2026-06-01), SDK refusal-fallback middleware (TypeScript, Python, Go, Java, C#), or a manual retry with fallback credit; rerouted requests are billed at the serving model's prices."
+      ]
+    },
+    {
+      "id": "effort-docs",
+      "title": "Effort parameter (Claude Platform Docs)",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/effort",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "The effort parameter controls thinking depth with values low, medium, high, xhigh, and max; the default is high",
+        "Effort lives in output_config; xhigh is available on Fable 5, Mythos 5, Opus 4.8, Opus 4.7, and Sonnet 5"
+      ]
+    },
+    {
+      "id": "evals-2026",
+      "title": "Demystifying evals for AI agents (Anthropic Engineering)",
+      "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+      "source_type": "official",
+      "published": "2026-01-09",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Anthropic's eval guidance (January 2026) says to start with 20 to 50 tasks drawn from real failures, combine code-based, model-based, and human graders, and run capability evals at low pass rates alongside regression evals held near 100 percent."
+      ]
+    },
+    {
+      "id": "fable-5-system-card",
+      "title": "System Card: Claude Fable 5 and Claude Mythos 5 (PDF)",
+      "url": "https://anthropic.com/claude-fable-5-mythos-5-system-card",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "With the claude.ai system prompt, Fable 5 reaches a 96 percent multi-turn appropriate response rate on suicide and self-harm, with flagged regressions on self-harm substitution suggestions and unsolicited diagnostic labels",
+        "Fable 5 offers opposing perspectives on political topics 70 percent of the time, comparable to Opus 4.8",
+        "The automated behavioral audit tracks warmth, intellectual depth, character drift, and wet blanket metrics",
+        "Fable 5's cybersecurity classifiers cause fallback to Opus 4.8 when cyber use is detected",
+        "Child safety single-turn rates are near perfect; residual risks were largely resolved by the claude.ai system prompt"
+      ],
+      "published": "2026-06-09"
+    },
+    {
+      "id": "harness-2025",
+      "title": "Effective harnesses for long-running agents (Anthropic Engineering)",
+      "url": "https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents",
+      "source_type": "official",
+      "published": "2025-11-26",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "For agent work spanning many context windows, Anthropic's November 2025 harness guidance prescribes an initializer session, one-feature-at-a-time incremental progress, and persistent artifacts (a JSON feature list, descriptive git history, a progress file), because compaction alone is not sufficient.",
+        "For agents spanning multiple sessions, Anthropic's harness pattern uses an initializer agent that creates an init script, a structured feature list, a progress file, and a git baseline, then coding agents that read the progress file and git history and implement one feature per session with end-to-end verification; the post finds context compaction alone insufficient for sustained multi-session progress. Practitioner guidance independently organizes context management into writing, selecting, compressing, and isolating context."
+      ]
+    },
+    {
+      "id": "harness-2026",
+      "title": "Harness design for long-running application development (Anthropic Engineering)",
+      "url": "https://www.anthropic.com/engineering/harness-design-long-running-apps",
+      "source_type": "official",
+      "published": "2026-03-24",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "The March 2026 harness-design post extends the November 2025 guidance with a three-agent planner, generator, evaluator harness communicating through files, and reports that with Opus 4.6 sprint decomposition and context resets could be replaced by one continuous session with automatic compaction."
+      ]
+    },
+    {
+      "id": "langchain-context-engineering",
+      "title": "Context Engineering for Agents (LangChain blog)",
+      "url": "https://www.langchain.com/blog/context-engineering-for-agents",
+      "source_type": "practitioner",
+      "published": "2025-07-02",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-10-05",
+      "confidence": "medium",
+      "claims": [
+        "For agents spanning multiple sessions, Anthropic's harness pattern uses an initializer agent that creates an init script, a structured feature list, a progress file, and a git baseline, then coding agents that read the progress file and git history and implement one feature per session with end-to-end verification; the post finds context compaction alone insufficient for sustained multi-session progress. Practitioner guidance independently organizes context management into writing, selecting, compressing, and isolating context."
+      ]
+    },
+    {
+      "id": "managed-2026",
+      "title": "Scaling Managed Agents: Decoupling the brain from the hands (Anthropic Engineering)",
+      "url": "https://www.anthropic.com/engineering/managed-agents",
+      "source_type": "official",
+      "published": "2026-04-08",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Anthropic's April 2026 Managed Agents architecture virtualizes an agent into three independent abstractions, session (event log), harness (brain), and sandbox (hands), so each can fail, evolve, or be replaced without breaking the others as harness assumptions go stale.",
+        "As of mid 2026 the documented build path is: Client SDK for raw API calls, Claude Agent SDK to run the agent loop in your own process, and Managed Agents as a hosted REST API for production; Anthropic suggests prototyping locally with the Agent SDK then moving to Managed Agents."
+      ]
+    },
+    {
+      "id": "mars-2025",
+      "title": "How we built our multi-agent research system (Anthropic Engineering)",
+      "url": "https://www.anthropic.com/engineering/multi-agent-research-system",
+      "source_type": "official",
+      "published": "2025-06-13",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Anthropic's Research feature uses an orchestrator-worker architecture where a lead Opus 4 agent plans and spawns parallel Sonnet 4 subagents; this multi-agent setup beat single-agent Opus 4 on Anthropic's internal research eval.",
+        "Multi-agent systems consume roughly 15x the tokens of a normal chat (single agents roughly 4x), so Anthropic advises them only for high-value tasks whose worth justifies the cost; token spend alone explained 80 percent of performance variance in their analysis.",
+        "Multi-agent architectures fit breadth-first, parallelizable research that exceeds a single context window, and fit poorly when subagents need shared context or tight real-time coordination, which is why most coding tasks stayed single-agent in 2025."
+      ]
+    },
+    {
+      "id": "memory-tool-docs",
+      "title": "Memory tool (Claude Docs)",
+      "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/memory-tool.md",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "The memory tool is generally available on the Messages API with no beta header, declared as tools entry type memory_20250818 with name memory; Claude stores files under a /memories directory via view, create, str_replace, insert, delete, and rename commands that the client application executes against its own storage, and implementations must validate paths to block directory traversal outside /memories.",
+        "For agents spanning multiple sessions, Anthropic's harness pattern uses an initializer agent that creates an init script, a structured feature list, a progress file, and a git baseline, then coding agents that read the progress file and git history and implement one feature per session with end-to-end verification; the post finds context compaction alone insufficient for sustained multi-session progress. Practitioner guidance independently organizes context management into writing, selecting, compressing, and isolating context."
+      ]
+    },
+    {
+      "id": "piebald-claude-code-prompts",
+      "title": "Piebald-AI claude-code-system-prompts (mechanical extraction)",
+      "url": "https://link-omitted.invalid/public-release",
+      "source_type": "practitioner",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-10-05",
+      "confidence": "medium",
+      "claims": [
+        "Claude Code's prompt fragments are mechanically extracted per release, v2.1.202 includes a Fable 5 model identity fragment"
+      ],
+      "published": "2026-07-06"
+    },
+    {
+      "id": "political-even-handedness",
+      "title": "Measuring political bias in Claude",
+      "url": "https://www.anthropic.com/news/political-even-handedness",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Even-handedness comes from character training plus system prompt instructions, measured by the open-source Paired Prompts eval"
+      ],
+      "published": "2025-11-13"
+    },
+    {
+      "id": "prompt-caching-docs",
+      "title": "Prompt caching (Claude Docs)",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching.md",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Prompt caching uses cache_control type ephemeral with a default 5-minute TTL that is refreshed at no extra cost on each reuse; an optional 1-hour TTL is set with ttl \"1h\". Cache writes bill at 1.25x base input price for the 5-minute TTL and 2x for the 1-hour TTL, while cache reads bill at 0.1x base input price on both.",
+        "A request supports up to 4 explicit cache_control breakpoints on content blocks, or a single top-level cache_control that automatically caches the last cacheable block; at each breakpoint the system looks backward up to 20 content blocks to find a previously written cache entry.",
+        "Prompt caching is exact prefix matching, so the breakpoint belongs on the last block whose prefix is identical across requests, with volatile content such as timestamps placed after it; prompts below the model-specific minimum (512 tokens for Claude Fable 5 first party, 1,024 for Opus 4.8, Sonnet 5, Sonnet 4.6, and Haiku 4.5) silently do not cache, returning zero cache tokens rather than an error.",
+        "Cache behavior is verified from the response usage object, where total input equals input_tokens plus cache_creation_input_tokens plus cache_read_input_tokens; cached prefixes still occupy the context window because caching changes billing, not token accounting.",
+        "A max_tokens 0 request pre-warms the prompt cache: it runs prefill, writes the cache at the breakpoint, and returns empty content with stop_reason max_tokens, billing only the cache write; it is rejected with streaming, extended thinking, structured outputs, and inside batches."
+      ]
+    },
+    {
+      "id": "prompting-best-practices-docs",
+      "title": "Prompting best practices, including long context and multi-window workflows (Claude Docs)",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/long-context-tips.md",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "For long-context prompts of roughly 20K tokens or more, official guidance is to place long documents and inputs near the top of the prompt, above the query, instructions, and examples, which improves performance across models.",
+        "Claude Sonnet 5, Sonnet 4.6, Sonnet 4.5, and Haiku 4.5 have automatic context awareness in which the API injects a token budget and remaining-capacity updates into the prompt; in harnesses that compact or persist context, prompting Claude that its context will be compacted prevents it from wrapping up work early, and when a window is cleared, starting a fresh context window and letting the model rediscover state from the filesystem can beat compaction."
+      ]
+    },
+    {
+      "id": "protecting-well-being-of-users",
+      "title": "Protecting the wellbeing of our users",
+      "url": "https://www.anthropic.com/news/protecting-well-being-of-users",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Anthropic layers system prompts, RL training, and a distress classifier surfacing crisis-resource banners covering 170+ countries",
+        "claude.ai requires users to be 18 or older; classifiers flag self-identified minors"
+      ],
+      "published": "2025-12-18"
+    },
+    {
+      "id": "s1",
+      "title": "Agent Skills - Claude Platform Docs (overview)",
+      "url": "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "A skill is a directory whose entrypoint is a SKILL.md file with YAML frontmatter; the required fields are name (max 64 characters, lowercase letters, numbers, and hyphens only, no reserved words \"anthropic\" or \"claude\") and description (non-empty, max 1024 characters), and the description should state both what the skill does and when to use it.",
+        "Skills load through progressive disclosure in three levels: frontmatter metadata (about 100 tokens per skill) is always in the system prompt, the SKILL.md body (under 5k tokens) loads only when the task matches the description, and bundled files and scripts load or execute only as needed, so bundled content that is not used costs no context.",
+        "Official skill security guidance is to treat skills like installing software: use only skills from trusted sources, audit every bundled file (SKILL.md, scripts, resources) before use, and treat skills that fetch external URLs as particularly risky because fetched content can contain malicious instructions that direct tool misuse or data exfiltration.",
+        "Anthropic consolidates prompt engineering guidance for current models into a single living reference, Prompting best practices, covering Claude Fable 5, Claude Mythos 5, Claude Opus 4.8, Claude Sonnet 5, and Claude Haiku 4.5, with dedicated model-specific pages for Fable 5, Sonnet 5, and Opus 4.8; legacy technique URLs (use-xml-tags, chain-of-thought, claude-4-best-practices) now redirect to this page.",
+        "Clear, explicit instructions remain the first technique: be specific about desired output and constraints, use numbered steps when order matters, and explicitly request above-and-beyond behavior instead of relying on the model to infer it.",
+        "Providing the motivation or context behind an instruction improves compliance on Claude 4/5 class models; Fable 5 in particular performs better when told why a request matters.",
+        "XML tags are the recommended way to structure complex prompts: wrap instructions, context, examples, and inputs in consistent, descriptive tags, nest tags for hierarchy, and wrap 3 to 5 relevant, diverse few-shot examples in example tags.",
+        "For long-context prompts (20k+ tokens), place longform documents at the top and the query at the end, structure documents with XML metadata tags, and ask Claude to extract grounding quotes before answering."
+      ]
+    },
+    {
+      "id": "s10",
+      "title": "Customize Claude Code with plugins - Claude blog announcement",
+      "url": "https://claude.com/blog/claude-code-plugins",
+      "source_type": "official",
+      "published": "2025-10-09",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Claude Code plugins launched in public beta on October 9, 2025 as lightweight packages combining slash commands, subagents, MCP servers, and hooks; a plugin marketplace is any git repository or URL containing a .claude-plugin/marketplace.json file, added with /plugin marketplace add."
+      ]
+    },
+    {
+      "id": "s11",
+      "title": "Code execution with MCP - Anthropic Engineering",
+      "url": "https://www.anthropic.com/engineering/code-execution-with-mcp",
+      "source_type": "primary",
+      "published": "2025-11-04",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Skills and MCP are complementary: MCP connects agents to external tools and data while skills encode procedural knowledge and workflows, including teaching agents complex workflows that involve external tools; Anthropic's code-execution approach has agents call MCP tools from code and reports cutting one workload from 150,000 tokens to 2,000 tokens (a 98.7% saving), with saved functions plus a SKILL.md forming a structured skill.",
+        "For long autonomous runs on Claude Fable 5, instructing the model to audit every progress claim against a tool result from the session nearly eliminates fabricated status reports, and separate fresh-context verifier subagents outperform self-critique.",
+        "Prompts and skills written for earlier models should be refactored rather than copied when migrating to Claude Fable 5, because overly prescriptive instructions can degrade output quality on the stronger model."
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "Prompt engineering overview",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Anthropic consolidates prompt engineering guidance for current models into a single living reference, Prompting best practices, covering Claude Fable 5, Claude Mythos 5, Claude Opus 4.8, Claude Sonnet 5, and Claude Haiku 4.5, with dedicated model-specific pages for Fable 5, Sonnet 5, and Opus 4.8; legacy technique URLs (use-xml-tags, chain-of-thought, claude-4-best-practices) now redirect to this page.",
+        "Official guidance treats prompt engineering as an empirical activity: before tuning, define success criteria, build ways to test against them, and have a first draft prompt."
+      ]
+    },
+    {
+      "id": "s3",
+      "title": "Create plugins - Claude Code Docs",
+      "url": "https://code.claude.com/docs/en/plugins",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "A Claude Code plugin is a directory that can bundle skills, commands, agents, hooks (hooks/hooks.json), MCP servers (.mcp.json), LSP servers (.lsp.json), background monitors, executables in bin/, and default settings; only plugin.json belongs inside .claude-plugin/, while all component directories sit at the plugin root.",
+        "Claude Code plugins launched in public beta on October 9, 2025 as lightweight packages combining slash commands, subagents, MCP servers, and hooks; a plugin marketplace is any git repository or URL containing a .claude-plugin/marketplace.json file, added with /plugin marketplace add.",
+        "Anthropic maintains two public marketplaces: claude-plugins-official, a curated set registered automatically on first interactive launch, and claude-community, where third-party submissions land after review with automated safety screening and are pinned to a specific commit SHA in the catalog.",
+        "Recommended practice is to start with standalone .claude/ configuration for personal or project-specific customization and quick experiments, then convert to a plugin when you need sharing, versioned releases, reuse across projects, or marketplace distribution, accepting namespaced skill names in exchange.",
+        "Providing the motivation or context behind an instruction improves compliance on Claude 4/5 class models; Fable 5 in particular performs better when told why a request matters.",
+        "The effort parameter is the primary control for trading intelligence, latency, and cost on Claude Fable 5: high is the default, xhigh serves the most capability-sensitive workloads, and lower effort often exceeds xhigh performance of prior models.",
+        "On Claude Fable 5, prompts and skills must not ask the model to echo or transcribe its internal reasoning in response text, since that can trigger the reasoning_extraction refusal category; applications should read structured thinking blocks and use a send-to-user tool for reasoning visibility instead.",
+        "For long autonomous runs on Claude Fable 5, instructing the model to audit every progress claim against a tool result from the session nearly eliminates fabricated status reports, and separate fresh-context verifier subagents outperform self-critique."
+      ]
+    },
+    {
+      "id": "s4",
+      "title": "Connect Claude Code to tools via MCP - Claude Code Docs",
+      "url": "https://code.claude.com/docs/en/mcp",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Claude Code supports stdio, HTTP (recommended for remote servers, with streamable-http accepted as an alias), SSE, and WebSocket MCP transports, with SSE deprecated in favor of HTTP; servers are configured at local scope (default, stored in ~/.claude.json), project scope (.mcp.json checked into version control), or user scope, and /mcp handles OAuth 2.0 authentication for remote servers.",
+        "Claude Code warns users to verify trust before connecting any MCP server because servers that fetch external content create prompt injection risk; project-scoped .mcp.json servers stay pending approval until the user trusts the workspace, and MCP tool output over 10,000 tokens triggers a warning configurable via MAX_MCP_OUTPUT_TOKENS.",
+        "Adaptive thinking has superseded manual extended-thinking budgets: it is always on for Claude Fable 5 and Mythos 5 (budget_tokens returns a 400 error there), is the only mode on Opus 4.7/4.8, is deprecated-replaced on Opus 4.6 and Sonnet 4.6, and automatically enables interleaved thinking between tool calls."
+      ]
+    },
+    {
+      "id": "s5",
+      "title": "Model Context Protocol Specification (revision 2025-11-25)",
+      "url": "https://modelcontextprotocol.io/specification/latest",
+      "source_type": "authority",
+      "published": "2025-11-25",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "medium",
+      "claims": [
+        "MCP is an open protocol using JSON-RPC 2.0 between hosts, clients, and servers; the current specification revision is 2025-11-25, servers offer resources, prompts, and tools, and clients may offer sampling, roots, and elicitation to servers.",
+        "The MCP specification's trust and safety principles require explicit user consent for all data access and tool invocation, state that hosts must not transmit resource data elsewhere without consent, and direct implementors to treat tool descriptions and annotations as untrusted unless they come from a trusted server.",
+        "Adaptive thinking has superseded manual extended-thinking budgets: it is always on for Claude Fable 5 and Mythos 5 (budget_tokens returns a 400 error there), is the only mode on Opus 4.7/4.8, is deprecated-replaced on Opus 4.6 and Sonnet 4.6, and automatically enables interleaved thinking between tool calls.",
+        "Adaptive thinking triggering is promptable: system-prompt guidance can suppress or encourage thinking, and per-message phrases steer individual turns, though steering is sensitive to exact wording and should be measured before production use."
+      ]
+    },
+    {
+      "id": "s6",
+      "title": "modelcontextprotocol/servers - MCP reference server implementations",
+      "url": "https://github.com/modelcontextprotocol/servers",
+      "source_type": "authority",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "medium",
+      "claims": [
+        "The modelcontextprotocol/servers repository, maintained by the MCP steering group, contains seven actively maintained reference servers (Everything, Fetch, Filesystem, Git, Memory, Sequential Thinking, Time) intended as demonstrations rather than production deployments, with twelve former servers archived and the MCP Registry serving as the browseable catalog of published servers.",
+        "The effort parameter is the primary control for trading intelligence, latency, and cost on Claude Fable 5: high is the default, xhigh serves the most capability-sensitive workloads, and lower effort often exceeds xhigh performance of prior models."
+      ]
+    },
+    {
+      "id": "s7",
+      "title": "Agent Skills Overview - agentskills.io (open standard)",
+      "url": "https://agentskills.io/home",
+      "source_type": "authority",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "medium",
+      "claims": [
+        "A skill is a directory whose entrypoint is a SKILL.md file with YAML frontmatter; the required fields are name (max 64 characters, lowercase letters, numbers, and hyphens only, no reserved words \"anthropic\" or \"claude\") and description (non-empty, max 1024 characters), and the description should state both what the skill does and when to use it.",
+        "The Agent Skills format was originally developed by Anthropic and released as an open standard (agentskills.io), and it is now supported by many third-party agents including Cursor, GitHub Copilot, VS Code, Gemini CLI, OpenAI Codex, OpenCode, Goose, and Amp; Claude Code follows the standard and extends it with invocation control, subagent execution, and dynamic context injection.",
+        "Tool triggering is steerable through prompting: explicit action language (Change this function) makes Claude act while suggestion language yields only suggestions, a light instruction increases tool use, and aggressive CRITICAL/MUST phrasing written for older models causes overtriggering on Opus 4.5/4.6 and should be dialed back."
+      ]
+    },
+    {
+      "id": "s8",
+      "title": "MCP Security Best Practices (spec 2025-11-25)",
+      "url": "https://modelcontextprotocol.io/specification/2025-11-25/basic/security_best_practices",
+      "source_type": "authority",
+      "published": "2025-11-25",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "medium",
+      "claims": [
+        "MCP security best practices forbid token passthrough (servers MUST NOT accept tokens not explicitly issued for the MCP server) and forbid using sessions for authentication; servers implementing authorization MUST verify all inbound requests.",
+        "The MCP spec's security document catalogs concrete attack classes with normative mitigations: confused deputy in OAuth proxy servers (per-client consent required), SSRF via OAuth metadata discovery (enforce HTTPS, block private IP ranges), session hijacking (secure non-deterministic session IDs bound to user identity), local server compromise (show the exact command and require consent before execution), and OAuth URL injection (allow only http/https schemes, never open URLs via shell).",
+        "Extremely detailed tool descriptions (at least 3 to 4 sentences covering what the tool does, when to use it, and parameter meaning) are the single biggest lever on tool-use performance; consolidating related operations, namespacing tool names, and returning only high-signal responses further improve agent behavior."
+      ]
+    },
+    {
+      "id": "sdk-blog-2025",
+      "title": "Building agents with the Claude Agent SDK",
+      "url": "https://claude.com/blog/building-agents-with-the-claude-agent-sdk",
+      "source_type": "official",
+      "published": "2025-09-29",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "The Claude Agent SDK, renamed from the Claude Code SDK in September 2025, exposes the same tools, agent loop, and context management that power Claude Code as Python and TypeScript libraries.",
+        "Anthropic frames the core agent loop as three stages, gather context, take action, verify work, and treats verification (rules-based feedback, visual checks, LLM-as-judge) as the lever that makes agents reliable.",
+        "For gathering context, Anthropic recommends starting with agentic search (bash tools like grep) before layering on semantic search, because it is more transparent and maintainable."
+      ]
+    },
+    {
+      "id": "sdk-docs",
+      "title": "Agent SDK overview (Claude Code docs)",
+      "url": "https://code.claude.com/docs/en/agent-sdk/overview",
+      "source_type": "api-docs",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "medium",
+      "claims": [
+        "The Claude Agent SDK, renamed from the Claude Code SDK in September 2025, exposes the same tools, agent loop, and context management that power Claude Code as Python and TypeScript libraries.",
+        "As of mid 2026 the documented build path is: Client SDK for raw API calls, Claude Agent SDK to run the agent loop in your own process, and Managed Agents as a hosted REST API for production; Anthropic suggests prototyping locally with the Agent SDK then moving to Managed Agents."
+      ]
+    },
+    {
+      "id": "skills-2025",
+      "title": "Equipping agents for the real world with Agent Skills (Anthropic Engineering)",
+      "url": "https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills",
+      "source_type": "official",
+      "published": "2025-10-16",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Agent Skills (October 2025) package procedural knowledge as folders with a SKILL.md entry file and load through three levels of progressive disclosure, so a skill can bundle large amounts of context without overwhelming the window.",
+        "Skills load through progressive disclosure in three levels: frontmatter metadata (about 100 tokens per skill) is always in the system prompt, the SKILL.md body (under 5k tokens) loads only when the task matches the description, and bundled files and scripts load or execute only as needed, so bundled content that is not used costs no context.",
+        "Official skill security guidance is to treat skills like installing software: use only skills from trusted sources, audit every bundled file (SKILL.md, scripts, resources) before use, and treat skills that fetch external URLs as particularly risky because fetched content can contain malicious instructions that direct tool misuse or data exfiltration.",
+        "Skills and MCP are complementary: MCP connects agents to external tools and data while skills encode procedural knowledge and workflows, including teaching agents complex workflows that involve external tools; Anthropic's code-execution approach has agents call MCP tools from code and reports cutting one workload from 150,000 tokens to 2,000 tokens (a 98.7% saving), with saved functions plus a SKILL.md forming a structured skill."
+      ]
+    },
+    {
+      "id": "smartscope-advanced",
+      "title": "Claude Code Advanced Best Practices: 11 Practical Techniques for Hooks, Subagents and Context Management (SmartScope)",
+      "url": "https://smartscope.blog/en/generative-ai/claude/claude-code-best-practices-advanced-2026",
+      "source_type": "practitioner",
+      "published": "2026-07-06",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-10-05",
+      "confidence": "medium",
+      "claims": [
+        "Practitioner guidance converges with official docs on constraining through systems rather than prompts: enforce mandatory rules with hooks and permission rules, keep CLAUDE.md minimal, isolate research and review in subagent contexts, and prototype fan-out batch runs on 2-3 files before scaling."
+      ]
+    },
+    {
+      "id": "support-advice-companionship",
+      "title": "How people use Claude for support, advice, and companionship",
+      "url": "https://www.anthropic.com/news/how-people-use-claude-for-support-advice-and-companionship",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Only 2.9 percent of claude.ai conversations are affective; companionship plus roleplay is under 0.5 percent",
+        "Claude pushes back in under 10 percent of coaching or counseling conversations, mainly on safety grounds"
+      ],
+      "published": "2025-06-27"
+    },
+    {
+      "id": "system-prompt-export-2026-07-07",
+      "title": "Claude Fable 5 system prompt export (claude.ai session)",
+      "url": "https://link-omitted.invalid/private-raw-capture-omitted-public-release",
+      "source_type": "primary",
+      "published": "2026-07-07",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "The claude.ai system prompt opens with an explicit token budget declaration of 190000 tokens inside a budget:token_budget block.",
+        "Claude Fable 5 is described as the first model in the Claude 5 family and part of a new Mythos-class model tier positioned above Claude Opus in capability.",
+        "Fable 5 and Mythos 5 are the same underlying model; Fable 5 adds safety measures for dual-use capabilities while Mythos 5 is available without them only to approved organizations.",
+        "The current API model lineup is Claude Fable 5, Opus 4.8, Sonnet 4.6, and Haiku 4.5, with only the Haiku string carrying a date suffix.",
+        "The product surface list includes Claude Code, Claude Cowork (a knowledge-work desktop app for non-developers), and beta agents Claude in Chrome, Claude in Excel, and Claude in Powerpoint, all usable as tools by Cowork.",
+        "Anthropic can inject six named runtime reminder types when a classifier fires: image_reminder, cyber_warning, system_warning, ethics_reminder, ip_reminder, and long_conversation_reminder, and states it never sends reminders that reduce restrictions.",
+        "The reliable knowledge cutoff is set to end of January 2026 while the conversation date is pinned to Tuesday, June 09, 2026, and Claude is told to search without asking permission for anything that could have changed since the cutoff.",
+        "Memories are derived from past conversations, updated periodically in the background, removed nightly after conversation deletion, and the whole memory system is off in Incognito Conversations."
+      ]
+    },
+    {
+      "id": "anthropic-claude-mythos-page",
+      "title": "Claude Mythos",
+      "url": "https://www.anthropic.com/claude/mythos",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Anthropic describes Claude Mythos as available to a small set of trusted partners for cybersecurity work, with biology access planned soon.",
+        "As of the page retrieved on 2026-07-07, Anthropic states Mythos access was restored to a set of US organizations on July 1, 2026.",
+        "The Mythos page says Fable 5 is the same underlying model as Mythos 5 with safeguards added, and repeats the $10 per million input tokens and $50 per million output tokens pricing."
+      ]
+    },
+    {
+      "id": "anthropic-fable-mythos-5-system-card-pdf",
+      "title": "System Card: Claude Fable 5 and Claude Mythos 5",
+      "url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
+      "source_type": "official",
+      "published": "2026-06-09",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "The Fable 5 and Mythos 5 system card describes two configurations of the same underlying model: Fable with cyber, bio and chemistry, frontier LLM, and reasoning extraction safeguards, and Mythos for trusted partners with those safeguards lifted.",
+        "Anthropic classifies Mythos 5 as CB-1 rather than CB-2, while noting that the judgment is less clear than for earlier models and that the model can significantly uplift well-resourced threat actors.",
+        "Anthropic classifies Mythos 5 as Cyber Tier 1 rather than Cyber Tier 2, while documenting a major increase in offensive cyber capability.",
+        "The system card reports public cyber evaluation results including ExploitBench mean score 10.75, CyberGym target reproduction 83.8 percent, and Firefox 147 working exploit success 88.4 percent.",
+        "Fable 5 safeguards flagged 407 of 410 ExploitBench episodes in Anthropic's system-card evaluation.",
+        "Anthropic reports more than 100,000 external red-team attempts and more than 1,000 hours without a universal jailbreak, while two task-specific jailbreaks were found."
+      ]
+    },
+    {
+      "id": "anthropic-mythos-preview-system-card-pdf",
+      "title": "System Card: Claude Mythos Preview",
+      "url": "https://www-cdn.anthropic.com/08ab9158070959f88f296514c21b7facce6f52bc.pdf",
+      "source_type": "official",
+      "published": "2026-04-07",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "The Mythos Preview system card states that Mythos Preview was not generally available and was restricted to Project Glasswing partners.",
+        "The Mythos Preview system card documents a step-change in autonomous vulnerability discovery, including CyberGym target reproduction around 83 percent and repeated Firefox exploit generation."
+      ]
+    },
+    {
+      "id": "anthropic-glasswing-initial-update",
+      "title": "Project Glasswing initial update",
+      "url": "https://www.anthropic.com/research/glasswing-initial-update",
+      "source_type": "official",
+      "published": "2026-05-22",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Anthropic reports that Project Glasswing had found more than 10,000 high or critical vulnerabilities within its initial phase.",
+        "Anthropic reports a large open source scan by Mythos Preview with 23,019 candidate findings, 6,202 estimated high or critical findings, 1,752 externally assessed findings, and a 90.6 percent true positive rate.",
+        "Anthropic frames triage, disclosure, and remediation capacity as the bottleneck after AI-assisted vulnerability discovery scales."
+      ]
+    },
+    {
+      "id": "anthropic-expanding-project-glasswing",
+      "title": "Expanding Project Glasswing",
+      "url": "https://www.anthropic.com/news/expanding-project-glasswing",
+      "source_type": "official",
+      "published": "2026-06-02",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Anthropic says Project Glasswing expanded to about 150 additional organizations across more than 15 countries after an initial group of about 50 partners.",
+        "The expansion includes power, water, healthcare, communications, hardware, vendors, nonprofits, open source maintainers, and safety testers.",
+        "Anthropic describes future Glasswing work as moving beyond vulnerability discovery toward patch writing, pre-release checks, detection and response automation, memory-safe rewrites, and disclosure triage scaling."
+      ]
+    },
+    {
+      "id": "anthropic-mythos-preview-research",
+      "title": "Claude Mythos Preview",
+      "url": "https://www.anthropic.com/research/mythos-preview",
+      "source_type": "official",
+      "published": "2026-04-07",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Anthropic says Mythos Preview identified thousands of zero-day vulnerabilities across major operating systems, browsers, and other important software, often with little or no human steering.",
+        "Anthropic presents Mythos Preview as a defensive cybersecurity model made available through Project Glasswing rather than general public access."
+      ]
+    },
+    {
+      "id": "anthropic-cvd-dashboard",
+      "title": "Anthropic coordinated vulnerability disclosure dashboard",
+      "url": "https://red.anthropic.com/2026/cvd/",
+      "source_type": "primary",
+      "published": "2026-05-22",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "As of May 22, 2026, Anthropic's CVD dashboard reports 1,596 disclosed vulnerabilities across 281 open source projects, 97 patched upstream, and 88 CVE or GHSA advisories.",
+        "The dashboard reports 23,019 candidate findings, 1,900 reviewed by external security firms, and 90.8 percent true positives in that reviewed set."
+      ]
+    },
+    {
+      "id": "claude-support-fable-model-switching",
+      "title": "Why Claude switched models in your conversation with Fable 5",
+      "url": "https://support.claude.com/en/articles/15363606-why-claude-switched-models-in-your-conversation-with-fable-5",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Claude app surfaces can automatically switch from Fable 5 to another model when safeguards determine that another model should handle a request.",
+        "The support page says model switching checks conversation memory, connected app context, web search, and file content when deciding whether Fable safeguards apply."
+      ]
+    },
+    {
+      "id": "claude-support-cyber-verification-program",
+      "title": "Real-time cyber safeguards on Claude Opus and Sonnet",
+      "url": "https://support.claude.com/en/articles/14604842-real-time-cyber-safeguards-on-claude-opus-and-sonnet",
+      "source_type": "official",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "medium",
+      "claims": [
+        "The Cyber Verification Program support page is scoped to Opus and Sonnet real-time cyber safeguards, not Mythos 5 access or Project Glasswing eligibility."
+      ]
+    },
+    {
+      "id": "claude-platform-migration-guide",
+      "title": "Claude model migration guide",
+      "url": "https://platform.claude.com/docs/en/about-claude/models/migration-guide",
+      "source_type": "api-docs",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "The model migration guide is a required check before porting prompts, tool definitions, or model IDs from earlier Claude generations to Fable 5 and Mythos 5.",
+        "The migration guide helps distinguish pinned model IDs from older naming assumptions and should be checked with the models overview before production migration."
+      ]
+    },
+    {
+      "id": "tools-2025",
+      "title": "Writing effective tools for agents, with agents (Anthropic Engineering)",
+      "url": "https://www.anthropic.com/engineering/writing-tools-for-agents",
+      "source_type": "official",
+      "published": "2025-09-11",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-08-06",
+      "confidence": "high",
+      "claims": [
+        "Anthropic's tool-design guidance says to build a few consolidated, workflow-targeted tools rather than wrap every API endpoint, namespace related tools, return high-signal token-efficient responses, and refine tool descriptions through evaluation.",
+        "Extremely detailed tool descriptions (at least 3 to 4 sentences covering what the tool does, when to use it, and parameter meaning) are the single biggest lever on tool-use performance; consolidating related operations, namespacing tool names, and returning only high-signal responses further improve agent behavior."
+      ]
+    },
+    {
+      "id": "willison-initial-impressions",
+      "title": "Initial impressions of Claude Fable 5",
+      "url": "https://simonwillison.net/2026/Jun/9/claude-fable-5",
+      "source_type": "practitioner",
+      "published": "2026-06-09",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-10-05",
+      "confidence": "medium",
+      "claims": [
+        "Claude Fable 5 and Claude Mythos 5 share the same specs: a 1M-token context window by default, up to 128k output tokens per request, a January 2026 knowledge cutoff, and the tokenizer introduced with Claude Opus 4.7, which produces roughly 30% more tokens than pre-4.7 models for the same text.",
+        "Early practitioner testing (Simon Willison, day one) found Fable 5 slow and expensive but exceptionally capable across coding, agentic, and vision tasks, spending $110.42 in about 5.5 hours of testing."
+      ]
+    },
+    {
+      "id": "zvi-fable5-system-card",
+      "title": "Claude Fable 5 and Mythos 5: The System Card (Zvi Mowshowitz)",
+      "url": "https://thezvi.substack.com/p/claude-fable-5-and-mythos-5-the-system",
+      "source_type": "practitioner",
+      "published": "2026-06-12",
+      "retrieved": "2026-07-07",
+      "refresh_due": "2026-10-05",
+      "confidence": "medium",
+      "claims": [
+        "The Fable 5 and Mythos 5 system card runs 319 pages; Zvi Mowshowitz's analysis reports bio capability close to the RSP threshold, red teams compressing 72.5 working days of biology work into 16 hours with the model, and unverbalized evaluation awareness in 24 percent of high-risk grading scenarios versus 3 percent in deployment-like conditions."
+      ]
+    }
+  ]
+}

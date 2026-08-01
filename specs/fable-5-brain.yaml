@@ -1,0 +1,57 @@
+# Brainstein spec v2
+spec_version: 2
+slug: "fable-5-brain"
+title: "Fable 5 Brain"
+domain: "Claude Fable 5 model and Claude Code harness ai operations and source-cited best practices"
+buyer: "AI power users and teams who operate Claude Fable 5 inside Claude Code and need current, cited operating guidance"
+owner: "DA"
+repo_url: "https://github.com/lovepixel-git/fablesecondbrain"
+license_name: "MIT for code, CC BY 4.0 for content"
+research_refresh_cadence: "14 days"
+workflows:
+  - "Answer a Fable 5 capability or limits question with a cited note and an official Anthropic URL"
+  - "Diff a new system prompt export against the previous one and file the capability changes"
+  - "Design and review Claude Code harness setups such as agents, skills, hooks, permissions, and MCP"
+  - "Refresh the research pack from official Anthropic docs, release notes, and engineering posts"
+  - "Audit the brain and drive it toward market-ready with the release gate"
+raw_sources:
+  - "System prompt export metadata from a live claude.ai Fable 5 session, with raw capture omitted from this public release"
+  - "Claude Code changelog and release notes snapshots"
+  - "Anthropic model documentation snapshots for Fable 5"
+enrichment_sources:
+  - "Anthropic official docs at docs.anthropic.com and docs.claude.com"
+  - "Anthropic news and announcements at anthropic.com/news"
+  - "Anthropic engineering blog at anthropic.com/engineering"
+  - "Claude Code release notes and changelog on GitHub"
+  - "Anthropic model cards and system card PDFs"
+deliverables:
+  - "Capability matrix report for Fable 5 model and Claude Code harness"
+  - "System prompt diff report between two dated exports"
+  - "Operating best practices playbook with dated citations"
+  - "Research pack with at least sixty dated citations"
+  - "Release-gated market-ready brain package"
+refusal_rules:
+  - "No claim about Fable 5 behavior without a dated source or a verbatim quote from the export"
+  - "Never present folklore or contested guidance as evidence-based"
+  - "No irreversible recommendation without owner, confidence, source, and rollback note"
+  - "Do not call this brain market-ready unless the audit gate passes"
+safety_risks:
+  - "Stale guidance about a fast-moving ai model presented as current"
+  - "System prompt export quoted out of context or misattributed"
+  - "Secrets or local absolute paths leaking into packaged artifacts"
+  - "Mutation of raw sources instead of append-only capture"
+playbook_steps:
+  - "Read AGENTS.md and the source ledger before any change"
+  - "Ingest new exports into .raw with manifest hash entries"
+  - "Synthesize wiki notes with citations and confidence tags"
+  - "Run lint and audit before every commit"
+  - "Package only after the market-ready gate passes"
+audit_focus:
+  - "Citation freshness against the fourteen day cadence"
+  - "Verbatim quote discipline for the system prompt corpus"
+  - "Frontmatter contract compliance across the wiki"
+  - "Zero em dashes in notes and generated SVGs"
+next_action_signals:
+  - "A refresh_due date in the source ledger is in the past"
+  - "A new Claude Code release note is not yet ingested"
+  - "Audit score below ninety or any critical failure"

@@ -1,0 +1,39 @@
+System:
+
+`<budget:token_budget>`
+
+190000
+
+`</budget:token_budget>`
+
+`<claude_behavior>`
+
+`<product_information>`
+
+This is a sanitized structural excerpt of a system prompt export used as a
+test fixture. It mirrors the tag and tool heading shapes of a real export.
+
+`</product_information>`
+
+`<tone_and_formatting>`
+
+Fixture prose line one.
+Fixture prose line two.
+
+`</tone_and_formatting>`
+
+`</claude_behavior>`
+
+Here are the functions available in JSONSchema format:
+
+## web_search
+
+Fixture description of a search tool.
+
+## web_fetch
+
+Fixture description of a fetch tool.
+
+## bash_tool
+
+Fixture description of a bash tool.

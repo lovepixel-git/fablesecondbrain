@@ -1,0 +1,79 @@
+{
+  "collapse-filter": false,
+  "search": "-path:assets -path:examples -path:dist",
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "tag:#fable5/model",
+      "color": {
+        "a": 1,
+        "rgb": 15119394
+      }
+    },
+    {
+      "query": "tag:#fable5/harness/claude-ai",
+      "color": {
+        "a": 1,
+        "rgb": 3900150
+      }
+    },
+    {
+      "query": "tag:#fable5/harness/claude-code",
+      "color": {
+        "a": 1,
+        "rgb": 16347926
+      }
+    },
+    {
+      "query": "tag:#fable5/best-practices",
+      "color": {
+        "a": 1,
+        "rgb": 2278750
+      }
+    },
+    {
+      "query": "tag:#fable5/memory",
+      "color": {
+        "a": 1,
+        "rgb": 11032055
+      }
+    },
+    {
+      "query": "tag:#fable5/safety",
+      "color": {
+        "a": 1,
+        "rgb": 15680580
+      }
+    },
+    {
+      "query": "tag:#fable5/communication",
+      "color": {
+        "a": 1,
+        "rgb": 1357990
+      }
+    },
+    {
+      "query": "tag:#fable5/tools",
+      "color": {
+        "a": 1,
+        "rgb": 15485081
+      }
+    }
+  ],
+  "collapse-display": true,
+  "showArrow": false,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1,
+  "lineSizeMultiplier": 1,
+  "collapse-forces": true,
+  "centerStrength": 0.5,
+  "repelStrength": 10,
+  "linkStrength": 1,
+  "linkDistance": 250,
+  "scale": 0.4444444444444439,
+  "close": true
+}

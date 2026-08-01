@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fable-5-brain"
+version = "1.2.1"
+description = "Public source-cited Obsidian brain and script layer for Fable 5, Mythos, Claude Code, and agent operations."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "DA"}]
+dependencies = []
+
+[project.scripts]
+fable-5-brain = "fable_5_brain.cli:main"
+
+[tool.setuptools]
+packages = ["fable_5_brain"]

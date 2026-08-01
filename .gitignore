@@ -1,0 +1,31 @@
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+*.egg-info/
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.env
+.env.*
+!.env.example
+/.raw/sources/
+/.raw/secrets/
+*.secret
+
+# host metadata and vault runtime
+.directory
+.obsidian/workspace.json
+.vault-meta/locks/
+*.pyc
+
+# Quartz site build artifacts
+/site/node_modules/
+/site/public/
+/site/.quartz-cache/
+/site/quartz/.quartz-cache/

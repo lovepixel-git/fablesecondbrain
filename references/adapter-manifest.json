@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "status": "domain-adapted",
+  "domain": "Claude Fable 5 model and Claude Code harness ai operations and source-cited best practices",
+  "generic_only": false,
+  "raw_input_types": [
+    "System prompt export metadata captured from a live claude.ai Fable 5 session, with raw capture omitted from this public release",
+    "Claude Code changelog and release notes snapshots",
+    "Anthropic model documentation snapshots for Fable 5"
+  ],
+  "rules": {
+    "domain_adapted_requires": [
+      "one real domain importer or ingestion path",
+      "one domain-specific synthesis module",
+      "one report renderer",
+      "one fixture per supported input type",
+      "tests for importer, synthesis, rendering, malformed input, and missing credentials"
+    ]
+  },
+  "input_schemas": [
+    {
+      "path": ".raw/.manifest.json",
+      "kind": "raw source manifest with sha256 provenance"
+    },
+    {
+      "path": "references/source-ledger.json",
+      "kind": "brainstein.source-ledger.v1"
+    },
+    {
+      "path": "tests/fixtures/system-prompt-excerpt.txt",
+      "kind": "system prompt export text format (tagged sections plus tool headings)"
+    }
+  ],
+  "importers": [
+    {
+      "path": "scripts/import_system_prompt_export.py",
+      "kind": "system prompt export parser and differ"
+    },
+    {
+      "path": "scripts/ingest_source.py",
+      "kind": "generic vault source ingester"
+    }
+  ],
+  "synthesis_modules": [
+    {
+      "path": "scripts/synthesize_brain.py",
+      "kind": "vault synthesis"
+    }
+  ],
+  "report_renderers": [
+    {
+      "path": "scripts/render_capability_matrix.py",
+      "kind": "capability matrix deliverable"
+    },
+    {
+      "path": "scripts/render_brain_report.py",
+      "kind": "generic brain report"
+    }
+  ],
+  "fixtures": [
+    {
+      "path": "tests/fixtures/system-prompt-excerpt.txt",
+      "kind": "sanitized structural export excerpt"
+    },
+    {
+      "path": "tests/fixtures/sample-source.md",
+      "kind": "generic ingest fixture"
+    }
+  ],
+  "tests": [
+    {
+      "path": "tests/test_import_export.py",
+      "kind": "importer, diff, malformed input, renderer"
+    },
+    {
+      "path": "tests/test_pipeline.py",
+      "kind": "generic pipeline"
+    }
+  ]
+}

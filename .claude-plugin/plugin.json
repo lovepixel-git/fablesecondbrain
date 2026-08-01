@@ -1,0 +1,33 @@
+{
+  "name": "fable-5-brain",
+  "version": "1.2.1",
+  "description": "Public source-cited Obsidian brain for Claude Fable 5, Claude Mythos 5, Project Glasswing, Claude Code, and agent operations.",
+  "author": {
+    "name": "lovepixel-git",
+    "url": "https://github.com/lovepixel-git"
+  },
+  "homepage": "https://github.com/lovepixel-git/fablesecondbrain",
+  "repository": "https://github.com/lovepixel-git/fablesecondbrain",
+  "license": "MIT",
+  "keywords": [
+    "fable-5-brain",
+    "obsidian",
+    "brain",
+    "fable-5",
+    "claude-code",
+    "source-cited"
+  ],
+  "skills": [
+    "./SKILL.md"
+  ],
+  "allowed-tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Bash(python3 scripts/*.py:*)",
+    "Bash(python scripts/*.py:*)",
+    "Bash(git status:*)",
+    "Bash(git log:*)",
+    "Bash(git diff:*)"
+  ]
+}

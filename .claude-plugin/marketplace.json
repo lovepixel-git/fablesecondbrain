@@ -1,0 +1,38 @@
+{
+  "name": "lovepixel-git-fable-5-brain",
+  "owner": {
+    "name": "lovepixel-git"
+  },
+  "metadata": {
+    "description": "Public Fable 5 Brain template and skill layer",
+    "version": "1.2.1"
+  },
+  "plugins": [
+    {
+      "name": "fable-5-brain",
+      "source": "./",
+      "description": "Public source-cited Obsidian brain for Claude Fable 5, Claude Mythos 5, Project Glasswing, Claude Code, and agent operations.",
+      "version": "1.2.1",
+      "author": {
+        "name": "lovepixel-git"
+      },
+      "repository": "https://github.com/lovepixel-git/fablesecondbrain",
+      "license": "MIT",
+      "category": "fable-5",
+      "tags": [
+        "obsidian",
+        "brain",
+        "fable-5",
+        "claude-code",
+        "source-cited"
+      ],
+      "keywords": [
+        "fable-5-brain",
+        "fable-5",
+        "obsidian",
+        "claude-code",
+        "source-cited"
+      ]
+    }
+  ]
+}
