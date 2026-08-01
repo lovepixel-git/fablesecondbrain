@@ -6,7 +6,7 @@
 - Redacted leak links in ledgers and wiki/site notes while keeping source labels and dates.
 - Aligned package and Claude plugin metadata to MIT and public release wording.
 - Refreshed README, support, security, publishing, and Pages docs for the live public site.
-- Current counts: 109 wiki pages, 96 sources, 187 claim-ledger rows, live GitHub Pages site at https://lovepixel-git.github.io/fablesecondbrain/.
+- Current counts: 109 wiki pages, 96 sources, 187 claim-ledger rows.
 
 ## 1.2.0 - 2026-07-07
 

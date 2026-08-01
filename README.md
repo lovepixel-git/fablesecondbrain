@@ -10,8 +10,6 @@ Project Glasswing, Claude Code, and current agent-operations practice.
 This is a public research repository. It is not affiliated with, endorsed by, or
 sponsored by Anthropic, and its content is derived from public sources.
 
-Browsable vault site: [https://lovepixel-git.github.io/fablesecondbrain/](https://lovepixel-git.github.io/fablesecondbrain/).
-
 > Public research repository. Not affiliated with, endorsed by, or sponsored by
 > Anthropic. Content is derived from public sources. Raw operator captures,
 > private notes, API credentials, and account-specific exports are omitted from
@@ -193,10 +191,9 @@ python scripts/package_release.py --version 1.0.0 --release-type market-ready
 
 ## GitHub Pages
 
-The browsable vault site is live and public at
-[https://lovepixel-git.github.io/fablesecondbrain/](https://lovepixel-git.github.io/fablesecondbrain/).
-It is built from `site/` and deployed by the manual workflow at
-`.github/workflows/pages.yml`.
+A browsable vault site can be built from `site/` and deployed with the manual
+workflow at `.github/workflows/pages.yml`. Enable GitHub Pages on the repository
+first, then set `baseUrl` in `site/quartz.config.ts` to match.
 
 The site excludes `.obsidian`, `hot.md`, and `log.md`; the accounts section
 contains only public-safe tier information. It must never expose raw captures,
