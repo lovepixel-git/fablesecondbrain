@@ -1,6 +1,6 @@
 # 008. The Six-Cut Best Practices Kernel
 
-DA, local skill at Skills/Public/best-practices, current 2026. PRACTITIONER.
+Daniel Agrici, local skill at Skills/Public/best-practices, current 2026. PRACTITIONER.
 Source: local repository (github.com/lovepixel-git/best-practices) (retrieved 2026-07-07)
 
 ## What it says
