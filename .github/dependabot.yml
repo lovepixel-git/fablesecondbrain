@@ -1,6 +1,16 @@
 version: 2
 updates:
+  # One grouped PR a month for all GitHub Actions bumps. Ungrouped weekly
+  # updates opened six separate PRs in a single evening, each one firing its
+  # own CI run and its own notification email.
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
+    open-pull-requests-limit: 3
+    groups:
+      github-actions:
+        patterns:
+          - "*"
+    commit-message:
+      prefix: "ci"
