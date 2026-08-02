@@ -214,11 +214,7 @@ Third-party source material, product names, documentation excerpts, and cited
 public artifacts remain the property of their respective owners and are not
 relicensed by this repository.
 
-## Community and Support
 
-Questions, updates, and operator support for this brain live in the AI Marketing
-Hub Pro community: https://www.skool.com/ai-marketing-hub-pro. Community
-membership is required.
 
 Use GitHub Issues for bugs and repository questions. See `SUPPORT.md` for
 support details, `SECURITY.md` for sensitive reports, and `CONTRIBUTING.md` for
