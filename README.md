@@ -215,7 +215,7 @@ public artifacts remain the property of their respective owners and are not
 relicensed by this repository.
 
 
-
+## GitHub Issues
 Use GitHub Issues for bugs and repository questions. See `SUPPORT.md` for
 support details, `SECURITY.md` for sensitive reports, and `CONTRIBUTING.md` for
 contribution workflow.
